@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
-import Header from "../components/Header";
+import PostLink from "../components/PostLink";
 import withLayout from "../lib/withLayout";
 
 const Index = () => (
@@ -8,10 +7,15 @@ const Index = () => (
     <Head>
       <title>Home | Nomoret Store</title>
     </Head>
-    <h1>welcome to next js</h1>{" "}
-    <Link href={"/about"}>
-      <a>About page</a>
-    </Link>
+    <h1>Posts:</h1>
+    <ul>
+      <li>
+        <PostLink title={"somthing"} />
+      </li>
+      <li>
+        <PostLink title={"somthing new"} />
+      </li>
+    </ul>
   </div>
 );
 
